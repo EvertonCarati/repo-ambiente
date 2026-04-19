@@ -13,8 +13,8 @@ jobs:
     teste-fake:
         runs-on: ubuntu-latest
         environment: 
-             name: homologacao
-             url: "http://homologacao.devopspro.com.br"homologacao
+            name: homologacao
+            url: "http://homologacao.devopspro.com.br"
         needs: [deploy-fake-homolog]
         steps:
             - name: Fake de teste em ambiente
@@ -22,7 +22,7 @@ jobs:
     deploy-fake-producao:
         runs-on: ubuntu-latest
         environment:
-            name: poroducao
+            name: producao
             url: "http://producao.devopspro.com.br"
         needs: [teste-fake]
         steps:
